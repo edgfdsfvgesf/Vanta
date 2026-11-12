@@ -1,0 +1,14 @@
+# Local server and credentials
+.env
+.env.*
+!.env.example
+.vanta-data/
+*.key
+*.pem
+
+# Dependencies and generated files
+node_modules/
+dist/
+site/
+.DS_Store
+Thumbs.db

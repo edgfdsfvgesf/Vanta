@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b0c10">
+<title>Vanta — your space on the web</title>
+<link rel="icon" type="image/png" href="VantaV.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="shell" id="shell">
+<header class="chrome">
+  <div class="brand"><img class="brand-wordmark" src="Vanta Logo.png" alt="Vanta"></div>
+  <div class="tabs" id="tabs"></div>
+  <button class="icon-btn add-tab" id="newTab" title="New tab" aria-label="New tab"><img class="toolbar-svg" src="plus-large-svgrepo-com.svg" alt=""></button>
+  <div class="window-actions">
+    <button class="icon-btn" id="minimize" aria-label="Minimize"><img class="toolbar-svg" src="dash-svgrepo-com.svg" alt=""></button>
+    <button class="icon-btn" id="fullscreen" aria-label="Toggle fullscreen"><img class="toolbar-svg" src="full-screen-svgrepo-com.svg" alt=""></button>
+  </div>
+</header>
+<div class="toolbar">
+  <div class="nav-actions">
+    <button class="icon-btn" id="back" title="Back" aria-label="Back"><img class="toolbar-svg" src="left-svgrepo-com.svg" alt=""></button>
+    <button class="icon-btn" id="forward" title="Forward" aria-label="Forward"><img class="toolbar-svg" src="right-svgrepo-com.svg" alt=""></button>
+    <button class="icon-btn" id="reload" title="Reload" aria-label="Reload"><img class="toolbar-svg" src="refresh-ccw-alt-svgrepo-com.svg" alt=""></button>
+    <button class="icon-btn" id="home" title="Home" aria-label="Home"><img class="toolbar-svg" src="home-svgrepo-com.svg" alt=""></button>
+  </div>
+  <form class="address" id="addressForm">
+    <img class="search-svg" src="search-alt-1-svgrepo-com.svg" alt="">
+    <input id="address" aria-label="Search or enter address" placeholder="Search or enter a URL" autocomplete="off">
+    <button class="address-go" aria-label="Go"><img class="toolbar-svg" src="enter-svgrepo-com.svg" alt=""></button>
+  </form>
+  <div class="bookmark-tools">
+    <button class="icon-btn" id="bookmarkToggle" title="Bookmark this page" aria-label="Bookmark this page"><img class="toolbar-svg" src="bookmark-svgrepo-com.svg" alt=""></button>
+    <button class="icon-btn" id="historyBtn" title="History" aria-label="History"><img class="toolbar-svg" src="history-svgrepo-com.svg" alt=""></button>
+  </div>
+  <button class="icon-btn" id="launchBtn" title="Apps" aria-label="Apps"><img class="toolbar-svg" src="apps-large-solid-svgrepo-com.svg" alt=""></button>
+  <button class="icon-btn" id="menuBtn" title="Menu" aria-label="Menu"><img class="toolbar-svg" src="menu-dots-svgrepo-com.svg" alt=""></button>
+  <button class="avatar" id="profileBtn" aria-label="Profile and settings">V</button>
+</div>
+<main id="viewport"></main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="popover hidden" id="menuPopover">
+  <button data-action="bookmarks"><img class="menu-svg" src="bookmark-svgrepo-com.svg" alt=""><span>Bookmarks</span></button>
+  <button data-action="history"><img class="menu-svg" src="history-svgrepo-com.svg" alt=""><span>History</span></button>
+  <hr>
+  <button data-action="settings"><img class="menu-svg" src="settings-svgrepo-com.svg" alt=""><span>Settings</span><kbd>Ctrl / ⌘ ,</kbd></button>
+  <button data-action="shortcuts"><img class="menu-svg" src="keyboard-svgrepo-com.svg" alt=""><span>Keyboard shortcuts</span><kbd>?</kbd></button>
+  <button data-action="console"><img class="menu-svg" src="console-svgrepo-com.svg" alt=""><span>Developer console</span></button>
+  <button data-action="fullscreen"><img class="menu-svg" src="full-screen-svgrepo-com.svg" alt=""><span>Toggle fullscreen</span></button>
+  <hr>
+  <button data-action="about"><img class="menu-svg" src="information-round-svgrepo-com.svg" alt=""><span>About Vanta</span></button>
+</div>
+<div class="popover launcher hidden" id="launcher">
+  <div class="popover-head"><b>Your apps</b><button class="text-button" id="manageApps">Manage</button></div>
+  <div class="app-grid" id="appGrid"></div>
+  <button class="add-app" id="addApp">＋ Add shortcut</button>
+</div>
+<div class="modal-layer hidden" id="modalLayer"><section class="modal" id="modal"></section></div>
+</div>
+<script src="app.js"></script>
+<script src="vanta-enhancements.js"></script>
+</body></html>
